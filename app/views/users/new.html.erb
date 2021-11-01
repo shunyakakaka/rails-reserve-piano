@@ -1,4 +1,4 @@
-<form class="ui form">
+<div class="ui form">
   <%= form_with model: @user do |form| %>
   <div class="field">
     <%= form.label :name, "名前" %>
@@ -12,9 +12,6 @@
     <%= form.label :phone_number, "電話番号" %>
     <%= form.telephone_field :phone_number, placeholder: "電話番号を入力してください" %>
   </div>
-  <%= form.submit "登録する", class: "ui button blue",
-    data: { confirm:
-    "登録してもよろしいですか？"
-    }%>
+  <%= form.submit "登録する", class: "ui button blue" %>
   <% end %>
-</form>
+</div>
