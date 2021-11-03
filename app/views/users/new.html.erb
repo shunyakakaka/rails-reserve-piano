@@ -12,6 +12,6 @@
     <%= form.label :phone_number, "電話番号" %>
     <%= form.telephone_field :phone_number, placeholder: "電話番号を入力してください" %>
   </div>
-  <%= form.submit "登録する", class: "ui button blue" %>
+  <%= form.submit "登録する", class: "ui button blue", data: {confirm: "こちらの内容でよろしいでしょうか"} %>
   <% end %>
 </div>
