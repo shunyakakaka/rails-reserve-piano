@@ -1,17 +1,17 @@
 <div class="ui form">
   <%= form_with model: @user do |form| %>
-  <div class="field">
-    <%= form.label :name, "名前" %>
-    <%= form.text_field :name, placeholder: "名前を入力してください" %>
-  </div>
-  <div class="field">
-    <%= form.label :address, "メールアドレス" %>
-    <%= form.text_field :address, placeholder: "メールアドレスを入力してください" %>
-  </div>
-  <div class="field">
-    <%= form.label :phone_number, "電話番号" %>
-    <%= form.telephone_field :phone_number, placeholder: "電話番号を入力してください" %>
-  </div>
-  <%= form.submit "登録する", class: "ui button blue", data: {confirm: "こちらの内容でよろしいでしょうか"} %>
+    <div class="field">
+      <%= form.label :name, "名前" %>
+      <%= form.text_field :name, placeholder: "名前を入力してください" %>
+    </div>
+    <div class="field">
+      <%= form.label :address, "メールアドレス" %>
+      <%= form.text_field :address, placeholder: "メールアドレスを入力してください" %>
+    </div>
+    <div class="field">
+      <%= form.label :phone_number, "電話番号" %>
+      <%= form.telephone_field :phone_number, placeholder: "電話番号を入力してください" %>
+    </div>
+    <%= form.submit "登録する", class: "ui button blue", data: {confirm: "こちらの内容でよろしいでしょうか"} %>
   <% end %>
 </div>

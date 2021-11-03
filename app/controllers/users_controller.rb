@@ -4,13 +4,20 @@ class UsersController < ApplicationController
   end
 
   def new
+    binding.pry
     @user = User.new()
   end
   
   def create
-    User.create(user_params)
-    binding.pry
-    redirect_to users_path
+    @user = User.new(user_params)
+    if @user.save
+      flash[:notice] = "#{@user}さんで登録しました!"
+      redirect_to root_path
+    else
+      flash[:user] = @user
+      flash[:error_message] = @user.errors.full_messages
+      redirect_to new_user_path  
+    end
   end
 
   def show
